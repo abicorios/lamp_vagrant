@@ -74,6 +74,8 @@ chown -R www-data:www-data /var/www/html
 
 The website is accessible by the [http://localhost:8080](http://localhost:8080), and the PhpMyAdmin is accessible by the [http://localhost:8080/phpmyadmin](http://localhost:8080/phpmyadmin). MySQL admin user is `root` with the password `123456` (it is not secure, but it is not important, because it is accessible only locally).
 
+You can disable the virtual machine by the `vagrant halt`, and next time you can enable it by the `vagrant up`.
+
 
 # Web development
 At the Windows the git-bash tool can be useful, it appears by an installation of the git. At the Linux the usual bash terminal is good.
