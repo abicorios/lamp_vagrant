@@ -4,6 +4,10 @@ Lamp server (Linux Ubuntu 20.04, Apache2, MySQL 5.7, PHP 7.3).
 
 It is insecure, for the local development only.
 
+# Warning
+
+It is infinitely slow on Windows 10 at the PhpMyAdmin import. But on the Ubuntu host it is good. So you need another LAMP on the Windows. Maybe I will try to fix it later.
+
 # Requirements
 
 VirtualBox [https://www.virtualbox.org/](https://www.virtualbox.org/)
