@@ -73,10 +73,10 @@ Vagrant.configure("2") do |config|
     apt update
     apt install -y php7.3-{cli,pdo,fpm,zip,gd,xml,mysql,cgi,mbstring,curl,xdebug} apache2 libapache2-mod-php7.3 unzip mysql-community-server=5.7* mysql-client=5.7*
     rm /var/www/html/index.html
+    echo xdebug.mode = debug >> /etc/php/7.3/mods-available/xdebug.ini
     cp /vagrant/000-default.conf /etc/apache2/sites-available/000-default.conf
     a2enmod rewrite
     service apache2 restart
-    mysql -p123456 -e "create user 'ciuiscrm'@'%' identified with mysql_native_password by '123456';grant usage on *.* to 'ciuiscrm'@'%';alter user 'ciuiscrm'@'%' require none;create database if not exists ciuiscrm;grant all privileges on ciuiscrm.* to 'ciuiscrm'@'%';flush privileges;"
     cd /var/www/html
     wget https://files.phpmyadmin.net/phpMyAdmin/5.1.3/phpMyAdmin-5.1.3-english.zip
     unzip phpMyAdmin-5.1.3-english.zip
